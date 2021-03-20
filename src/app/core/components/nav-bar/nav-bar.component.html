@@ -1,0 +1,26 @@
+<div class="nav-bar-component__container">
+
+    <div class="nav-bar-component__logo-container">
+        <img
+            src="../../../../assets/ADN-Farm.png"
+            alt="adn-farm-logo"
+            class="nav-bar-component__logo-img"
+        >
+    </div>
+
+    <div class="nav-bar-component__bar-nav">
+
+        <nav>
+            <a
+                class="nav-bar-component__bar-nav-label"
+                *ngFor="let route of routes"
+                [routerLink]="route.url"
+                routerLinkActive="active"
+            >
+                {{route.label}}
+            </a>
+        </nav>
+
+    </div>
+
+</div>

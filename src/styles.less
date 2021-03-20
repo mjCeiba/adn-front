@@ -1,0 +1,116 @@
+/* You can add global styles to this file, and also import other style files */
+@dark-green: #397c4e;
+@soft-green: #93cea6;
+@font-color-white: #f7f7f7;
+@font-color-dark: #414040;
+@font-color-dark-soft: #8d8d8d;
+@bg-color-body: @soft-green;
+@bg-color-nav-bar: #e8fff0;
+@bg-color-complement: #e4ffee;
+@bg-color-complement-white: #ccffdb;
+@bg-color-red: #e64b30;
+@font-color-white-darker: #e6e6e6;
+
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+  margin: 15px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: @dark-green;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: @dark-green;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: @font-color-dark;
+}
+
+.btn-fab {
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  transition: ease-in-out 300ms;
+  width: 50px;
+  background-color: @font-color-white;
+  color: @soft-green;
+  height: 50px;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+
+.btn {
+  background-color: transparent;
+  font-size: 20px;
+  cursor: pointer;
+  outline: none;
+  transition: ease-in-out 300ms;
+  color: @font-color-white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  margin: 10px;
+}
+
+.btn-action {
+  background-color: @dark-green;
+  font-weight: 500;
+}
+
+.btn-secondary {
+  color: @dark-green;
+  font-weight: 300;
+
+  &:hover {
+    background-color: @font-color-white-darker;
+  }
+}
+
+.farm-imput {
+  border: none;
+  border-bottom: 1px solid @font-color-dark-soft;
+  background-color: transparent;
+  outline: none;
+  width: 300px;
+  font-size: 20px;
+  transition: 200ms ease;
+
+  &::placeholder {
+    transition: ease 300ms;
+  }
+
+  &:focus {
+    border-bottom: 2px solid @dark-green;
+
+    &::placeholder {
+      color: @font-color-white-darker;
+      position: relative;
+      transform: translateY(15);
+    }
+  }
+
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

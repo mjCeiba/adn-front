@@ -1,0 +1,46 @@
+@import '../../../styles.less';
+
+.image-card {
+
+  &__container {
+    background-color: @bg-color-complement;
+    margin: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 155px;
+    transition: ease-in-out 400ms;
+
+    &:hover {
+      box-shadow: 10px 10px 22px -8px rgba(0, 0, 0, 0.32);
+      transform: scale(1.05, 1.05);
+      background-color: @bg-color-complement-white;
+    }
+  }
+
+  &__header {
+    text-align: center;
+    font-size: 22px;
+  }
+
+  &__body {
+
+    &-img-container {
+      display: flex;
+      justify-content: center;
+      margin: 10px 0;
+    }
+
+    &-img {
+      width: 100px;
+    }
+  }
+
+  &__footer {
+
+    &-item-desc {
+      color: @font-color-dark-soft;
+    }
+  }
+
+}

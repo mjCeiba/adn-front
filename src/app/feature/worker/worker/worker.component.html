@@ -1,0 +1,22 @@
+<div class="worker-component__container">
+    <div class="worker-component__header">
+        <h1 class="worker-component__header-worker-title">Workers</h1>
+        <div class="worker-component__bar">
+            <app-bar (refresh)="onRefresh($event)"></app-bar>
+        </div>
+    </div>
+
+    <div
+        class="worler-component__worker-items"
+        *ngIf="workers.length > 0"
+    >
+        <div class="worker-component__worker-items-generator">
+            <app-image-card
+                *ngFor="let item of imageCards; let i=index"
+                [item]="item"
+                id="worker-card-{{i}}"
+                (workerSelected)="onReciveWorker($event)"
+            ></app-image-card>
+        </div>
+    </div>
+</div>

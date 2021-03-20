@@ -1,0 +1,53 @@
+<div class="task-list-component__container">
+
+    <div
+        class="task-list-component__new-task"
+        (click)="createNewTask()"
+    >
+        <span class="task-list-component__card-subtitle">Create new task</span>
+    </div>
+
+    <div
+        class="task-list-component__card"
+        *ngFor="let task of tasks; let i = index"
+    >
+        <span class="task-list-component__card-title">#{{i+1}}</span>
+
+        <div class="task-list-component__card-separator">
+            <span class="task-list-component__card-subtitle">Description:</span>
+            <span class="task-list-component__card-desc">{{task.description}}</span>
+        </div>
+
+        <div class="task-list-component__card-separator">
+            <span class="task-list-component__card-subtitle">Creation date:</span>
+            <span class="task-list-component__card-date">{{task.taskCreationDate | date}}</span>
+        </div>
+
+        <div
+            class="task-list-component__card-separator"
+            *ngIf="task.done"
+        >
+            <span class="task-list-component__card-subtitle">Complete date:</span>
+            <span class="task-list-component__card-date">{{task.taskDoneStatusDate | date}}</span>
+        </div>
+
+        <div class="task-list-component__card-separator">
+            <span class="task-list-component__card-subtitle">Status:</span>
+            <span *ngIf="!task.done">Incomplete</span>
+            <span *ngIf="task.done">Complete</span>
+        </div>
+
+        <div
+            class="task-list-component__card-separator btn-container"
+            *ngIf="!task.done"
+        >
+            <button
+                (click)="completeTask(task)"
+                class="btn-action btn task-list-component__btn-complete"
+            >
+                Complete
+            </button>
+        </div>
+    </div>
+
+</div>

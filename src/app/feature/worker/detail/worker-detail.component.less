@@ -1,0 +1,54 @@
+.worker-detail-component {
+  &__container {}
+
+  &__header {
+
+    display: flex;
+
+    &-welcome {
+      padding: 0;
+      margin: 0 15px 0 0;
+      font-size: 45px;
+    }
+
+    &-worker-name {
+      font-size: 45px;
+    }
+
+    &-worker-balance {
+      font-size: 30px;
+    }
+  }
+
+  &__card {
+    width: 50%;
+
+    &-separator {
+      margin: 10px 0;
+    }
+
+    &-worker {
+      &-key {
+        font-size: 25px;
+        font-weight: 500;
+        margin: 0 15px;
+      }
+
+      &-value {
+        font-size: 25px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+  }
+
+  &__task-container {
+    width: 30%;
+    margin: 0 30px;
+    height: 80vh;
+    overflow-y: auto;
+  }
+}

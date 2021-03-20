@@ -1,0 +1,22 @@
+<div
+    class="image-card__container"
+    (click)="onSelectWorker(item)"
+>
+
+    <div class="image-card__header">
+        <span>{{item.title}}</span>
+    </div>
+
+    <div class="image-card__body">
+        <div class="image-card__body-img-container">
+            <img
+                src={{item.urlImg}}
+                class="image-card__body-img"
+            >
+        </div>
+    </div>
+
+    <div class="image-card__footer">
+        <span class="image-card__footer-item-desc">{{item.desc}}</span>
+    </div>
+</div>

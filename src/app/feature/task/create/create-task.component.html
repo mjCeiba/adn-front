@@ -1,0 +1,37 @@
+<div class="create-task-component__container">
+    <div class="create-task-component__header">
+        <h1 class="create-task-component__header-title">Create new task to:</h1>
+        <span class="create-task-component__header-subtitle">{{data.name}}</span>
+    </div>
+
+    <div class="create-task-component__form">
+        <form class="task-form">
+
+            <textarea
+                type="input"
+                class="farm-imput create-task-component__text-area"
+                placeholder="Description"
+                name="description"
+                id='description'
+                [formControl]="descriptionControl"
+                required
+            ></textarea>
+
+        </form>
+    </div>
+
+    <div class="create-task-component__btn-container">
+        <button
+            (click)="onCreate()"
+            class="create-task-component__btn-send btn-action btn"
+        >
+            Save
+        </button>
+        <button
+            (click)="onCancel()"
+            class="create-task-component__btn-cancel btn-secondary btn"
+        >
+            Cancel
+        </button>
+    </div>
+</div>

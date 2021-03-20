@@ -1,0 +1,57 @@
+<div class="create-worker-component__container">
+
+    <div class="create-worker-component__header">
+        <h1>Create new worker</h1>
+    </div>
+
+    <div class="create-worker-component__form">
+        <form
+            class="worker-form"
+            [formGroup]="workerForm"
+        >
+
+            <div class="create-worker-component__form-separator">
+                <input
+                    type="input"
+                    class="farm-imput create-worker-component__input"
+                    placeholder="Name"
+                    name="name"
+                    id='name'
+                    formControlName="name"
+                    required
+                    autocomplete="off"
+                >
+            </div>
+
+            <div class="create-worker-component__form-separator">
+                <input
+                    type="number"
+                    class="farm-imput create-worker-component__input"
+                    placeholder="Phone"
+                    name="phone"
+                    id='phone'
+                    formControlName="phone"
+                    autocomplete="off"
+                    required
+                >
+                <!-- <span>Hol</span> -->
+            </div>
+
+        </form>
+    </div>
+
+    <div class="create-worker-component__btn-container">
+        <button
+            (click)="onCreate()"
+            class="create-worker-component__btn-send btn-action btn"
+        >
+            Save
+        </button>
+        <button
+            (click)="onCancel()"
+            class="create-worker-component__btn-cancel btn-secondary btn"
+        >
+            Cancel
+        </button>
+    </div>
+</div>

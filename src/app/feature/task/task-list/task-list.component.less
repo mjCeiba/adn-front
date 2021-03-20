@@ -1,0 +1,59 @@
+@import '../../../../styles.less';
+
+.btn-container {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.task-list-component {
+
+  &__btn-complete {
+    margin: 0;
+  }
+
+  &__container {
+    margin: 15px;
+  }
+
+  &__card {
+    background-color: @bg-color-nav-bar;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+
+    &-title {
+      font-weight: 700;
+      font-size: 25px;
+    }
+
+    &-subtitle {
+      font-weight: 600;
+      font-size: 18px;
+      margin: 0 10px;
+    }
+
+    &-separator {
+      margin: 7px 0;
+    }
+  }
+
+  &__new-task {
+    background-color: @bg-color-nav-bar;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0;
+    cursor: pointer;
+    transition: ease-in-out 400ms;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+
+    &:hover {
+      box-shadow: 10px 10px 22px -8px rgba(0, 0, 0, 0.32);
+      transform: scale(1.02, 1.02);
+    }
+  }
+
+}

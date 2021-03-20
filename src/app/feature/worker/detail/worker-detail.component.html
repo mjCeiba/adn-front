@@ -1,0 +1,39 @@
+<div class="worker-detail-component__container">
+    <div class="worker-detail-component__header">
+        <h1 class="worker-detail-component__header-welcome">Worker:</h1>
+        <span class="worker-detail-component__header-worker-name">{{worker.name}}</span>
+    </div>
+    <div class="worker-detail-component__body">
+        <div class="worker-detail-component__card">
+
+            <div class="worker-detail-component__card-separator">
+                <span class="worker-detail-component__card-worker-key">Balance:</span>
+                <span class="worker-detail-component__card-worker-value">{{worker.balance | currency}}</span>
+            </div>
+
+            <div class="worker-detail-component__card-separator">
+                <span class="worker-detail-component__card-worker-key">Phone:</span>
+                <span class="worker-detail-component__card-worker-value">{{worker.phone}}</span>
+            </div>
+
+            <div class="worker-detail-component__card-separator">
+                <span class="worker-detail-component__card-worker-key">Total task:</span>
+                <span class="worker-detail-component__card-worker-value">{{worker.tasks.length}}</span>
+            </div>
+
+            <div class="worker-detail-component__card-separator">
+                <span class="worker-detail-component__card-worker-key">Total task completed:</span>
+                <span class="worker-detail-component__card-worker-value">{{taskCompleted}}</span>
+            </div>
+
+        </div>
+        <div class="worker-detail-component__task-container">
+            <app-task-list
+                (update)="refreshPage($event)"
+                [tasks]="worker.tasks"
+                [worker]="{name: worker.name, id: worker.id}"
+            ></app-task-list>
+        </div>
+    </div>
+
+</div>
